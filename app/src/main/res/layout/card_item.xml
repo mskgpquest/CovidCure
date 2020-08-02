@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="7dp"
+    app:cardCornerRadius="10dp"
+    android:paddingLeft="10dp"
+    android:paddingBottom="30dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textview_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Depression, stress higher during peak of Covid-19 pandemic - Times of India"
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/imageview_news"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/mock"
+            android:layout_below="@+id/textview_title"/>
+
+
+        <TextView
+            android:id="@+id/textview_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:text="Science News: SYDNEY: Australian researchers have found that rates of elevated psychological distress, including depression and anxiety symptoms, were found among a"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:layout_below="@id/imageview_news"
+            android:layout_margin="5dp"
+            android:gravity="fill_horizontal"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textview_description"
+            android:text="VIEW"
+            android:layout_alignParentStart="true"/>
+        <TextView
+            android:id="@+id/textview_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2020-07-20"
+            android:textColor="#013220"
+            android:layout_below="@id/textview_description"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

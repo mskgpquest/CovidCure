@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="7dp"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="4dp"
+                        android:background="#87cefa">
+
+                        <TextView
+                            android:id="@+id/textview_location_heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Your Location"
+                            android:textSize="25sp"
+                            android:textColor="#000"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:textStyle="bold"
+                            android:background="@drawable/rounded_corner"/>
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:id="@+id/textview_location_latitude"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_below="@+id/textview_location_heading"
+                            android:textColor="#013220"
+                            android:padding="4dp"
+                            android:background="@drawable/rounded_corner"/>
+
+                        <TextView
+                            android:layout_marginTop="3dp"
+                            android:id="@+id/textview_location_longitude"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_below="@+id/textview_location_latitude"
+                            android:textColor="#000"
+                            android:padding="4dp"
+                            android:background="@drawable/rounded_corner"/>
+
+                        <TextView
+                            android:layout_marginTop="3dp"
+                            android:id="@+id/textview_location_locality"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_below="@+id/textview_location_longitude"
+                            android:textColor="#000"
+                            android:padding="4dp"
+                            android:background="@drawable/rounded_corner"/>
+
+                        <TextView
+                            android:layout_marginTop="3dp"
+                            android:id="@+id/textview_location_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_below="@+id/textview_location_locality"
+                            android:textColor="#000"
+                            android:padding="4dp"
+                            android:background="@drawable/rounded_corner"/>
+
+                        <TextView
+                            android:layout_marginTop="3dp"
+                            android:id="@+id/textview_location_countryname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_below="@+id/textview_location_address"
+                            android:textColor="#000"
+                            android:padding="4dp"
+                            android:background="@drawable/rounded_corner"/>
+
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_for_covid_info"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:padding="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/rel">
+                <RelativeLayout
+                    android:id="@+id/rel1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#87cefa">
+
+                    <ProgressBar
+                        android:id="@+id/progressbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="invisible" />
+                    <TextView
+                        android:id="@+id/text_view_state_total"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Your State Report"
+                        android:textColor="#000"
+                        android:textSize="25sp"
+                        android:gravity="center"
+                        android:background="@drawable/rounded_corner"
+                        android:padding="6dp"
+                        android:textStyle="bold"
+                        android:layout_margin="4dp"/>
+
+                    <GridLayout
+                    android:id="@+id/grid_layout_to_hold_covid_info_from_api_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:rowCount="2"
+                    android:columnCount="2"
+                    android:layout_below="@+id/text_view_state_total"
+                    android:visibility="invisible">
+
+                        <TextView
+                            android:id="@+id/confirmed_case_in_my_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:background="@drawable/rounded_corner"
+                            android:textColor="#e58600"
+                            android:layout_gravity="fill"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"/>
+
+                        <TextView
+                            android:id="@+id/active_case_in_my_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:textColor="#0000FF"
+                            android:background="@drawable/rounded_corner"
+                            android:layout_gravity="fill"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"/>
+
+
+                        <TextView
+                            android:id="@+id/death_case_in_my_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/rounded_corner"
+                            android:layout_gravity="fill"
+                            android:textColor="#FF0000"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"/>
+
+                        <TextView
+                            android:id="@+id/recovered_case_in_my_state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:gravity="center"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/rounded_corner"
+                            android:layout_gravity="fill"
+                            android:textColor="#008000"
+                            android:layout_rowWeight="1"
+                            android:layout_columnWeight="1"/>
+
+                </GridLayout>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_for_covid_info_all_states"
+                android:layout_width="match_parent"
+                android:layout_height="1810dp"
+                android:padding="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/card_for_covid_info">
+                <RelativeLayout
+                    android:id="@+id/rel2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#87cefa">
+
+                    <ProgressBar
+                        android:id="@+id/progressbar2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="invisible" />
+                    <TextView
+                        android:id="@+id/text_view_all_state_total"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="National Report"
+                        android:textColor="#000"
+                        android:textSize="25sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:background="@drawable/rounded_corner"
+                        android:padding="8dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginTop="8dp"/>
+                    <TextView
+                        android:id="@+id/national_legends"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/text_view_all_state_total"
+                        android:background="@drawable/rounded_corner"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="2dp"/>
+
+                    <GridLayout
+                        android:id="@+id/grid_layout_to_hold_covid_info_from_api_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:rowCount="39"
+                        android:columnCount="5"
+                        android:background="@drawable/rounded_corner"
+                        android:layout_margin="5dp"
+                        android:layout_below="@+id/national_legends"
+                        android:layout_centerInParent="true">
+
+                    </GridLayout>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/iv_statecode"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_below="@id/card_for_covid_info_all_states"
+                android:src="@drawable/india_image"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dist_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_below="@+id/iv_statecode">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_below="@+id/dist_recyclerview">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/textview_time_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recyclerview"
+                android:textSize="12sp"
+                android:textColor="#000"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_corner"/>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="7dp"
+    app:cardCornerRadius="20dp"
+    android:paddingLeft="10dp"
+    android:paddingBottom="30dp"
+    app:cardBackgroundColor="#87cefa">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/dist_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NORTH 24 PARGANAS"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="#000"
+            android:layout_margin="3dp"
+            android:padding="4dp"
+            android:background="@drawable/rounded_corner"/>
+
+       <GridLayout
+           android:id="@+id/grid_district_card"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_below="@+id/dist_name"
+           android:rowCount="2"
+           android:columnCount="2">
+
+           <TextView
+               android:id="@+id/dist_confirm"
+               android:layout_gravity="fill"
+               android:text="confirm"
+               android:textSize="25sp"
+               android:gravity="center"
+               android:textColor="#e58600"
+               android:layout_rowWeight="1"
+               android:layout_columnWeight="1"
+               android:layout_margin="3dp"
+               android:background="@drawable/rounded_corner"/>
+
+           <TextView
+               android:id="@+id/dist_active"
+               android:layout_gravity="fill"
+               android:text="active"
+               android:textSize="25sp"
+               android:gravity="center"
+               android:textColor="#0000FF"
+               android:layout_rowWeight="1"
+               android:layout_columnWeight="1"
+               android:layout_margin="3dp"
+               android:background="@drawable/rounded_corner"/>
+
+           <TextView
+               android:id="@+id/dist_death"
+               android:layout_gravity="fill"
+               android:text="death"
+               android:textSize="25sp"
+               android:gravity="center"
+               android:layout_rowWeight="1"
+               android:layout_columnWeight="1"
+               android:layout_margin="3dp"
+               android:textColor="#FF0000"
+               android:background="@drawable/rounded_corner"/>
+
+           <TextView
+               android:id="@+id/dist_recovered"
+               android:layout_gravity="fill"
+               android:layout_rowWeight="1"
+               android:layout_columnWeight="1"
+               android:text="recovered"
+               android:textSize="25sp"
+               android:gravity="center"
+               android:textColor="#008000"
+               android:layout_margin="3dp"
+               android:background="@drawable/rounded_corner"/>
+
+       </GridLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
